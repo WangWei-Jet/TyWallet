@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_gravity="left"
+            android:includeFontPadding="false"
+            android:layout_marginTop="80dp"
+            android:text="付款方信息:(点击右侧按钮添加付款账户)" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:id="@+id/tv_input"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/common_et"
+                android:includeFontPadding="false"
+                android:inputType="none|textPersonName"
+                android:paddingBottom="4dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="4dp"
+                android:paddingRight="45dp"
+                android:gravity="center_vertical"
+                android:textStyle="bold"
+                android:textSize="16dp" />
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/ib_arrow_right"
+                android:src="@mipmap/more_1x"
+                android:scaleType="fitXY"
+                android:background="#00000000"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_gravity="left"
+            android:includeFontPadding="false"
+            android:layout_marginTop="28dp"
+            android:text="收款方信息:(点击右侧按钮添加收款人信息)" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:id="@+id/tv_output"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/common_et"
+                android:includeFontPadding="false"
+                android:inputType="none|textPersonName"
+                android:paddingBottom="4dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="4dp"
+                android:paddingRight="45dp"
+                android:gravity="center_vertical"
+                android:textStyle="bold"
+                android:textSize="16dp" />
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="3dp"
+                android:id="@+id/ib_add_output"
+                android:src="@mipmap/ic_add"
+                android:scaleType="fitXY"
+                android:background="#00000000"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/transfer_button"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/common_bt"
+            android:layout_marginTop="40dp"
+            android:text="转账"
+            android:textSize="14sp"/>
+
+
+</LinearLayout>

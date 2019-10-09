@@ -1,0 +1,1 @@
+include ':app',':TYWalletLib', ':wallettestapplication', ':TYBitcoinLib', ':BlockChainWallet', ':BottomDialog'

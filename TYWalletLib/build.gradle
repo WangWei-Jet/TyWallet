@@ -1,0 +1,100 @@
+//apply plugin: 'com.android.application'
+import org.tmatesoft.svn.core.wc.*
+apply plugin: 'com.android.library'
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+//        ndk {
+//            moduleName "wallet-jni" //生成的so名字
+//            abiFilters "armeabi", "armeabi-v7a", "x86" //输出指定三种abi体系结构下的so库。
+//            stl "stlport_static" //打开.c 的 debug
+//        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug{
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+//        debug {
+//            ndk {
+//                debuggable true
+//            }
+//            jniDebuggable true
+//        }
+    }
+
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+//            jni.srcDirs = []
+
+//            jni.srcDirs = []//disable automatic ndk-build call
+//            jniLibs.srcDir "src/main/libs"
+        }
+
+    }
+//    externalNativeBuild {
+//        ndkBuild {
+//            path 'src/main/jni/Android.mk'
+//        }
+//    }
+
+
+
+    libraryVariants.all { variant ->
+        variant.outputs.all {
+//            outputFileName = "TYWalletLib_R${getSvnRevision()}_${releaseTime()}.aar"
+            outputFileName = "TYWalletLib.aar"
+        }
+    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    //依赖包
+    api 'org.web3j:core:3.3.1-android'
+    //    implementation 'org.web3j:core:3.5.0'
+//    api 'com.github.briandilley.jsonrpc4j:jsonrpc4j:1.5.3'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.0'
+    api 'com.google.code.gson:gson:2.8.5'
+//    api 'com.alibaba:fastjson:1.2.49'
+    //    api files('libs/ADIPlugins_V1.00.00.R6298.jar')
+
+    //logback
+    api 'org.slf4j:slf4j-api:1.7.25'
+    api 'com.github.tony19:logback-android:1.3.0-2'
+
+    implementation 'com.github.hijesse:android-logger:2.5.0'
+}
+
+
+def releaseTime() {
+    return new Date().format("yyyyMMddHHmmss")
+}
+
+def getSvnRevision() {
+    ISVNOptions options = SVNWCUtil.createDefaultOptions(true);
+    SVNClientManager clientManager = SVNClientManager.newInstance(options);
+    SVNStatusClient statusClient = clientManager.getStatusClient();
+    SVNStatus status = statusClient.doStatus(projectDir, false);
+    SVNRevision revision = status.getCommittedRevision();
+
+    return revision.getNumber();
+}

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">TyWallet</string>
+
+    <string-array name="fromAddressArray">
+        <item>0x45Be79365AE0b2a7e0eB94A657Cb2d4143585475</item>
+        <item>0x8674703312c3091df0169b1e7bcf0be12efec780</item>
+        <item>0x2d8af1f43f1f196bb975b39c13ed3ee2488be503</item>
+    </string-array>
+
+
+    <string-array name="toAddressArray">
+        <item>0x45Be79365AE0b2a7e0eB94A657Cb2d4143585475</item>
+        <item>0x8674703312c3091df0169b1e7bcf0be12efec780</item>
+        <item>0x2d8af1f43f1f196bb975b39c13ed3ee2488be503</item>
+    </string-array>
+    <string name="title_activity_bitcoin_transfer">BitcoinTransferActivity</string>
+
+
+</resources>

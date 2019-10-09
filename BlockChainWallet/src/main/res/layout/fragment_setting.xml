@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    android:orientation="vertical">
+
+    <com.whty.blockchain.wallet.utils.view.SettingItemRelative
+        android:layout_height="75dp"
+        android:id="@+id/si_user_info"
+        android:layout_marginTop="70dp"
+        android:layout_width="match_parent"/>
+
+    <com.whty.blockchain.wallet.utils.view.SettingItemRelative
+        android:layout_height="55dp"
+        android:id="@+id/si_environment"
+        android:layout_width="match_parent"/>
+
+    <com.whty.blockchain.wallet.utils.view.SettingItemRelative
+        android:layout_height="55dp"
+        android:id="@+id/si_browser_url"
+        android:layout_width="match_parent"/>
+
+    <com.whty.blockchain.wallet.utils.view.SettingItemRelative
+        android:layout_height="55dp"
+        android:id="@+id/si_wallet_management"
+        android:layout_width="match_parent"/>
+
+    <com.whty.blockchain.wallet.utils.view.SettingItemRelative
+        android:layout_height="55dp"
+        android:id="@+id/si_cold_wallet"
+        android:layout_width="match_parent"/>
+
+</LinearLayout>

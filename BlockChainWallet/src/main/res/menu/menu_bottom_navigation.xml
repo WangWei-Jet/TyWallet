@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="@drawable/ic_navigation_wallet"
+        android:id="@+id/it_navigation_query"
+        android:title="@string/item_bottom_navigator_query" />
+    <item
+        android:icon="@drawable/ic_navigation_trade"
+        android:id="@+id/it_navigation_trade"
+        android:title="@string/item_bottom_navigator_trade" />
+    <item
+        android:icon="@drawable/ic_navigation_setting"
+        android:id="@+id/it_navigation_setting"
+        android:title="@string/item_bottom_navigator_setting" />
+</menu>

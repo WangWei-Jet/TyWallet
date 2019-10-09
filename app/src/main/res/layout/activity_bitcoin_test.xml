@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".BitcoinTestActivity">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/bt_get_balance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="查询余额" />
+            <Button
+                android:id="@+id/bt_push_transaction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="发送交易" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:paddingTop="22dp"
+            android:paddingBottom="22dp"
+            android:background="@drawable/common_et"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_env"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="环境说明" />
+
+            <Button
+                android:id="@+id/bt_env"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="@android:color/holo_blue_bright"
+                android:background="@drawable/common_et"
+                android:text="点击切换环境" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/resultView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:text="Result" />
+    </LinearLayout>
+
+</LinearLayout>

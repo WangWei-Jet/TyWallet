@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@android:color/transparent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:padding="5dp"
+        android:text="title" />
+
+    <TextView
+        android:id="@+id/tv_content_0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="4dp"
+        android:padding="3dp"
+        android:maxHeight="180dp"
+        android:visibility="gone"
+        android:text="content_0"/>
+
+    <EditText
+        android:id="@+id/et_content_0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:includeFontPadding="false"
+        android:padding="3dp"
+        android:visibility="gone"
+        android:background="@drawable/common_et"
+        android:gravity="center"
+        android:ems="4" />
+
+    <TextView
+        android:id="@+id/tv_content_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="4dp"
+        android:padding="3dp"
+        android:visibility="gone"
+        android:text="content_1" />
+
+    <EditText
+        android:id="@+id/et_content_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="4dp"
+        android:includeFontPadding="false"
+        android:padding="3dp"
+        android:visibility="gone"
+        android:background="@drawable/common_et"
+        android:ems="4" />
+
+    <LinearLayout
+        android:id="@+id/ll_oper_0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="2dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_oper_0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_weight="0.5" />
+
+        <Button
+            android:id="@+id/bt_oper_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.5" />
+    </LinearLayout>
+
+</LinearLayout>

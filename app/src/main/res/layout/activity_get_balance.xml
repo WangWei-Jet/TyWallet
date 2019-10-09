@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TransferActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:padding="3dp"
+        android:background="@drawable/common_et"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:includeFontPadding="false"
+                android:text="地址索引:"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/et_address_n"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="4dp"
+                android:background="@drawable/common_et"
+                android:includeFontPadding="false"
+                android:inputType="none|textPersonName"
+                android:paddingBottom="4dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="4dp"
+                android:text="m/44'/60'/0'/0/0"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bt_get_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="点击获取地址" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="15dp"
+        android:padding="3dp"
+        android:background="@drawable/common_et"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:layout_marginTop="10dp"
+            android:text="钱包地址:"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_address"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="right"
+                android:layout_weight="0.8"
+                android:background="@drawable/common_et"
+                android:gravity="center|left"
+                android:hint="0x"
+                android:includeFontPadding="false"
+                android:inputType="textMultiLine"
+                android:paddingLeft="5dp"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/bt_address"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_gravity="right"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="0.2"
+                android:background="@drawable/common_et"
+                android:includeFontPadding="false"
+                android:text="..." />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:layout_marginTop="10dp"
+            android:text="币种:"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/et_token"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="right"
+                android:layout_weight="0.8"
+                android:background="@drawable/common_et"
+                android:gravity="center"
+                android:text="ETH"
+                android:includeFontPadding="false"
+                android:paddingLeft="5dp"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/bt_token"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_gravity="right"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="0.2"
+                android:background="@drawable/common_et"
+                android:includeFontPadding="false"
+                android:text="..." />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bt_get_balance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="查询余额"
+            android:layout_marginTop="15dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Result"
+        android:layout_marginTop="20dp" />
+
+</LinearLayout>

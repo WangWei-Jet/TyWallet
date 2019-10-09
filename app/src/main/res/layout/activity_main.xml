@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/scanDevice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="扫描设备" />
+
+                <Button
+                    android:id="@+id/connect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="连接钱包" />
+
+                <Button
+                    android:id="@+id/disconnect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="断开连接" />
+
+                <Button
+                    android:id="@+id/bt_deviceInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="设备信息" />
+
+                <Button
+                    android:id="@+id/bt_create_wallet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="创建钱包" />
+
+                <Button
+                    android:id="@+id/bt_wipe_wallet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="擦除钱包" />
+
+                <Button
+                    android:id="@+id/bt_backup_wallet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="备份钱包" />
+
+                <Button
+                    android:id="@+id/bt_recover_wallet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="恢复钱包" />
+
+                <Button
+                    android:id="@+id/getBalance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="以太坊查余额" />
+
+                <Button
+                    android:id="@+id/transfer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="以太坊交易" />
+
+                <Button
+                    android:id="@+id/bt_bitcoin_query_utxo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="比特币查余额" />
+
+                <Button
+                    android:id="@+id/bt_bitcoin_push_tx"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="比特币交易" />
+
+                <Button
+                    android:id="@+id/bt_select_file"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="钱包升级" />
+
+                <Button
+                    android:id="@+id/bt_bitcoin_test"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="比特币测试" />
+
+            </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:paddingTop="22dp"
+            android:paddingBottom="22dp"
+            android:background="@drawable/common_et"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_env"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="以太坊环境说明" />
+
+            <Button
+                android:id="@+id/bt_env"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="@android:color/holo_blue_bright"
+                android:background="@drawable/common_et"
+                android:text="点击切换以太坊环境" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:paddingTop="22dp"
+            android:paddingBottom="22dp"
+            android:background="@drawable/common_et"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_env_bitcoin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="比特币环境说明" />
+
+            <Button
+                android:id="@+id/bt_env_bitcoin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="@android:color/holo_blue_bright"
+                android:background="@drawable/common_et"
+                android:text="点击切换比特币环境" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/resultView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:text="Result" />
+    </LinearLayout>
+
+</LinearLayout>

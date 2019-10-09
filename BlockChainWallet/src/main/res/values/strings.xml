@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">BlockChainWallet</string>
+
+
+    <string name="item_bottom_navigator_query">查询</string>
+    <string name="item_bottom_navigator_trade">交易</string>
+    <string name="item_bottom_navigator_setting">设置</string>
+
+</resources>
